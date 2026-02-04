@@ -10,6 +10,11 @@ $bg-color-dark: #100430;
 $font-color-dark: #dbd5d5;
 $accent-color-dark: #e9754b;
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: $font-stack;
     background-color: $bg-color;
