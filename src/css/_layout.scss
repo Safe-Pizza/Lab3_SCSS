@@ -1,3 +1,5 @@
+@use "base";
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,8 +19,14 @@ nav {
     }
 
     a {
-        display: inline-block;
+        display: block;
         text-decoration: none;
         padding: 10px 16px;
+        color: base.$font-color;
+    }
+
+    a:hover {
+        color: base.$bg-color;
+        background-color: base.$accent-color;
     }
 }

@@ -1,10 +1,17 @@
 $font-stack: Trebuchet MS, sans-serif;
-$primary-color: #015551;
-$font-color: #FDFBEE;
-$accent-color: #FE4F2D;
+
+//Light color-scheme
+$bg-color: #FDFBEE;
+$font-color: #3b3b3b;
+$accent-color: #025404;
+
+//Dark color-scheme
+$bg-color-dark: #100430;
+$font-color-dark: #dbd5d5;
+$accent-color-dark: #f2571f;
 
 body {
     font-family: $font-stack;
-    background-color: $primary-color;
+    background-color: $bg-color;
     color: $font-color;
 }
