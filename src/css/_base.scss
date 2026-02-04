@@ -1,0 +1,10 @@
+$font-stack: Trebuchet MS, sans-serif;
+$primary-color: #015551;
+$font-color: #FDFBEE;
+$accent-color: #FE4F2D;
+
+body {
+    font-family: $font-stack;
+    background-color: $primary-color;
+    color: $font-color;
+}
