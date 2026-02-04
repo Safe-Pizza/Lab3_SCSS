@@ -30,3 +30,21 @@ nav {
         background-color: base.$accent-color;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: base.$bg-color-dark;
+        color: base.$font-color-dark;
+    }
+
+    nav {
+        a {
+            color: base.$font-color-dark;
+        }
+
+        a:hover {
+            color: base.$bg-color-dark;
+            background-color: base.$accent-color-dark;
+        }
+    }
+}
