@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $font-stack: Lucida Sans, sans-serif;
 
 //Light color-scheme
@@ -11,14 +13,18 @@ $font-color-dark: #dbd5d5;
 $accent-color-dark: #e9754b;
 
 //Font-sizes
-$fontsize-h1: 6rem;
+$fontsize-h1: 8rem;
 $fontsize-h2: 4rem;
 $fontsize-h3: 3rem;
 $fontsize-p: 2rem;
 
 @mixin article() {
     margin-bottom: 2em;
-    padding: 2em;
+    padding: 3em;
+    border: 1px solid $accent-color;
+    background-color: color.scale($bg-color, $lightness: -5%);
+    box-shadow: 0.2em 0em 0.2em rgb(0, 0, 0, 0.6),
+        -0.2em 0em 0.2em rgb(0, 0, 0, 0.6);
 }
 
 * {
@@ -38,6 +44,8 @@ body {
 
 h1 {
     font-size: $fontsize-h1;
+    color: $accent-color;
+    text-shadow: 2px 2px 3px black;
     padding-top: 15vh;
     margin-bottom: 1em;
 }

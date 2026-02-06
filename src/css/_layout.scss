@@ -1,4 +1,5 @@
 @use "base";
+@use "sass:color";
 
 .container {
     max-width: 1200px;
@@ -71,6 +72,10 @@ article {
         color: base.$font-color-dark;
     }
 
+    h1 {
+        color: base.$accent-color-dark;
+    }
+
     nav {
         a {
             color: base.$font-color-dark;
@@ -86,5 +91,12 @@ article {
     .bar2,
     .bar3 {
         background-color: white !important;
+    }
+
+    article {
+        border-color: white;
+        background-color: color.scale(base.$bg-color-dark, $lightness: 5%);
+        box-shadow: 0.2em 0em 0.2em rgba(255, 255, 255, 0.6),
+            -0.2em 0em 0.2em rgba(255, 255, 255, 0.6);
     }
 }
