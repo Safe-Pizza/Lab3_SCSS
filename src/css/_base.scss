@@ -18,6 +18,20 @@ $fontsize-h2: 4rem;
 $fontsize-h3: 3rem;
 $fontsize-p: 2rem;
 
+@mixin shape($size, $color, $circle) {
+    width: $size;
+    height: $size;
+    background-color: $color;
+    display: inline-block;
+    font-size: 8rem;
+    padding-right: 10px;
+    color: white;
+
+    @if $circle {
+        border-radius: 50%;
+    }
+}
+
 @mixin article() {
     margin-bottom: 2em;
     padding: 3em;
@@ -66,4 +80,12 @@ p {
     font-size: $fontsize-p;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 2em;
+}
+
+#shape-circle {
+    @include shape(100px, $accent-color, true);
+}
+
+#shape-square {
+    @include shape(100px, $accent-color, false);
 }

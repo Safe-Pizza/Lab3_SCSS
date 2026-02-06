@@ -6,6 +6,11 @@
     margin: 0 auto;
 }
 
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 //mainnav
 nav {
     ul {
@@ -36,6 +41,7 @@ nav {
 main {
     max-width: 900px;
     display: grid;
+    margin: 0 auto;
 }
 
 section {
@@ -44,6 +50,10 @@ section {
 
 article {
     @include base.article;
+}
+
+img {
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -76,6 +86,14 @@ article {
         color: base.$accent-color-dark;
     }
 
+    #shape-circle {
+        @include base.shape(100px, base.$accent-color-dark, true);
+    }
+
+    #shape-square {
+        @include base.shape(100px, base.$accent-color-dark, false);
+    }
+
     nav {
         a {
             color: base.$font-color-dark;
@@ -95,7 +113,7 @@ article {
 
     article {
         border-color: white;
-        background-color: color.scale(base.$bg-color-dark, $lightness: 5%);
+        background-color: color.scale(base.$bg-color-dark, $lightness: -50%);
         box-shadow: 0.2em 0em 0.2em rgba(255, 255, 255, 0.6),
             -0.2em 0em 0.2em rgba(255, 255, 255, 0.6);
     }
