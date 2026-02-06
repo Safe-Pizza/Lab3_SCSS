@@ -1,4 +1,4 @@
-$font-stack: Trebuchet MS, sans-serif;
+$font-stack: Lucida Sans, sans-serif;
 
 //Light color-scheme
 $bg-color: #FDFBEE;
@@ -10,13 +10,52 @@ $bg-color-dark: #100430;
 $font-color-dark: #dbd5d5;
 $accent-color-dark: #e9754b;
 
+//Font-sizes
+$fontsize-h1: 6rem;
+$fontsize-h2: 4rem;
+$fontsize-h3: 3rem;
+$fontsize-p: 2rem;
+
+@mixin article() {
+    margin-bottom: 2em;
+    padding: 2em;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
 }
 
 body {
     font-family: $font-stack;
     background-color: $bg-color;
     color: $font-color;
+}
+
+h1 {
+    font-size: $fontsize-h1;
+    padding-top: 15vh;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: $fontsize-h2;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: $fontsize-h3;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: $fontsize-p;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 2em;
 }
