@@ -3,7 +3,7 @@
 $font-stack: Lucida Sans, sans-serif;
 
 //Light color-scheme
-$bg-color: #FDFBEE;
+$bg-color: #f6f5f0;
 $font-color: #000000;
 $accent-color: #025404;
 
@@ -46,7 +46,7 @@ $fontsize-p-mobile: 2rem;
     padding: 3rem;
     max-width: 80%;
     justify-self: center;
-    background-color: white;
+    background-color: color.scale($bg-color, $lightness: -8%);
     border-radius: 1rem;
 }
 
@@ -98,6 +98,7 @@ h1 {
 h2 {
     font-size: $fontsize-h2;
     color: $accent-color;
+    text-shadow: 2px 2px 3px black;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
@@ -113,6 +114,7 @@ p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 2em;
     text-align: left;
+    line-height: 3.8rem;
 }
 
 //logotyp storlek och färg i original tema
