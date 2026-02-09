@@ -1,3 +1,4 @@
+//Toggle funktion för mobil meny
 document.querySelector("#hamburger-menu").addEventListener("click", toggleMenu);
 
 function toggleMenu() {

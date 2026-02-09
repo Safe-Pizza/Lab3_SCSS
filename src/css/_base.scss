@@ -25,6 +25,7 @@ $fontsize-h2-mobile: 4rem;
 $fontsize-h3-mobile: 3.5rem;
 $fontsize-p-mobile: 2rem;
 
+//mixin för logotyp
 @mixin shape($size, $color, $circle) {
     width: $size;
     height: $size;
@@ -39,6 +40,7 @@ $fontsize-p-mobile: 2rem;
     }
 }
 
+//mixin för article element
 @mixin article() {
     margin-bottom: 2em;
     padding: 3em;
@@ -48,6 +50,7 @@ $fontsize-p-mobile: 2rem;
         -0.2em 0em 0.2em rgb(0, 0, 0, 0.6);
 }
 
+//grundinställning för webbplatsen
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +60,8 @@ $fontsize-p-mobile: 2rem;
     font-size: 62.5%;
 }
 
+
+//typsnitt, storlekar och färger samt margin/padding för dessa
 body {
     font-family: $font-stack;
     background-color: $bg-color;
@@ -89,6 +94,7 @@ p {
     margin-bottom: 2em;
 }
 
+//logotyp storlek och färg i original tema
 #shape-circle {
     @include shape(70px, $accent-color, true);
 }
