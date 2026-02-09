@@ -68,6 +68,7 @@ main {
 
 section {
     display: grid;
+    @include base.section;
 }
 
 article {
@@ -79,6 +80,14 @@ img {
     border-radius: 50%;
     margin-bottom: 5rem;
     margin-top: 5rem;
+}
+
+.button button {
+    @include base.button(base.$accent-color);
+}
+
+.button button:hover {
+    background-color: color.scale(base.$accent-color, $lightness: 8%);
 }
 
 footer {
@@ -101,6 +110,8 @@ footer {
 
         p {
             font-size: base.$fontsize-p-mobile;
+            line-height: 3rem;
+            padding: 1rem;
         }
     }
 
@@ -139,6 +150,22 @@ footer {
             justify-self: stretch;
         }
     }
+
+    main {
+        padding: 1rem
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    article {
+        width: 100%;
+    }
+
+        .button button {
+            font-size: 3rem;
+        }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -148,6 +175,10 @@ footer {
     }
 
     h1 {
+        color: base.$accent-color-dark;
+    }
+
+    h2 {
         color: base.$accent-color-dark;
     }
 
@@ -182,9 +213,21 @@ footer {
     }
 
     article {
+        background-color: color.scale(base.$bg-color-dark, $lightness: 10%);
+    }
+
+    section {
+        background-color: color.scale(base.$bg-color-dark, $lightness: -15%);
         border-color: white;
-        background-color: color.scale(base.$bg-color-dark, $lightness: -50%);
-        box-shadow: 0.2em 0em 0.2em rgba(255, 255, 255, 0.6),
-            -0.2em 0em 0.2em rgba(255, 255, 255, 0.6);
+        box-shadow: 0.3rem 0rem 0.3rem rgba(255, 255, 255, 0.6),
+            -0.3rem 0rem 0.3rem rgba(255, 255, 255, 0.5);
+    }
+
+    .button button {
+        background-color: base.$accent-color-dark;
+    }
+
+    .button button:hover {
+        background-color: color.scale(base.$accent-color-dark, $lightness: 15%);
     }
 }

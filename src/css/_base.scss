@@ -3,14 +3,14 @@
 $font-stack: Lucida Sans, sans-serif;
 
 //Light color-scheme
-$bg-color: #FDFBEE;
-$font-color: #3b3b3b;
+$bg-color: #f6f5f0;
+$font-color: #000000;
 $accent-color: #025404;
 
 //Dark color-scheme
-$bg-color-dark: #100430;
+$bg-color-dark: #000000;
 $font-color-dark: #dbd5d5;
-$accent-color-dark: #e9754b;
+$accent-color-dark: #C34618;
 
 //Font-sizes
 $fontsize-h1: 8rem;
@@ -23,7 +23,7 @@ $fontsize-nav: 2rem;
 $fontsize-h1-mobile: 6rem;
 $fontsize-h2-mobile: 4rem;
 $fontsize-h3-mobile: 3.5rem;
-$fontsize-p-mobile: 2rem;
+$fontsize-p-mobile: 1.8rem;
 
 //mixin för logotyp
 @mixin shape($size, $color, $circle) {
@@ -42,12 +42,31 @@ $fontsize-p-mobile: 2rem;
 
 //mixin för article element
 @mixin article() {
-    margin-bottom: 2em;
-    padding: 3em;
-    border: 1px solid $accent-color;
-    background-color: color.scale($bg-color, $lightness: -5%);
-    box-shadow: 0.2em 0em 0.2em rgb(0, 0, 0, 0.6),
-        -0.2em 0em 0.2em rgb(0, 0, 0, 0.6);
+    margin-bottom: 8rem;
+    padding: 3rem;
+    max-width: 80%;
+    justify-self: center;
+    background-color: color.scale($bg-color, $lightness: -8%);
+    border-radius: 1rem;
+}
+
+@mixin section() {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0rem 0.3rem rgb(0, 0, 0, 0.6),
+        -0.3rem 0rem 0.3rem rgb(0, 0, 0, 0.5);
+}
+
+@mixin button($bg-color) {
+    background-color: $bg-color;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 6rem;
+    padding: 2rem 3rem 2rem 3rem;
+    cursor: pointer;
 }
 
 //grundinställning för webbplatsen
@@ -78,6 +97,8 @@ h1 {
 
 h2 {
     font-size: $fontsize-h2;
+    color: $accent-color;
+    text-shadow: 2px 2px 3px black;
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
@@ -92,6 +113,8 @@ p {
     font-size: $fontsize-p;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-bottom: 2em;
+    text-align: left;
+    line-height: 3.8rem;
 }
 
 //logotyp storlek och färg i original tema
