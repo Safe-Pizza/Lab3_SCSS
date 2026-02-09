@@ -17,6 +17,7 @@ $fontsize-h1: 8rem;
 $fontsize-h2: 4rem;
 $fontsize-h3: 3rem;
 $fontsize-p: 2rem;
+$fontsize-nav: 2.5rem;
 
 @mixin shape($size, $color, $circle) {
     width: $size;

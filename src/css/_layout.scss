@@ -7,8 +7,16 @@
 }
 
 .top-nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+header {
+    padding: 1rem;
 }
 
 //mainnav
@@ -17,6 +25,9 @@ nav {
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-direction: row !important;
+        justify-self: flex-end;
     }
 
     li {
@@ -29,13 +40,17 @@ nav {
         text-decoration: none;
         padding: 10px 16px;
         color: base.$font-color;
-        font-size: base.$fontsize-h3;
+        font-size: base.$fontsize-nav;
     }
 
     a:hover {
         color: base.$bg-color;
         background-color: base.$accent-color;
     }
+}
+
+.current-page {
+    background-color: base.$accent-color;
 }
 
 main {
@@ -61,12 +76,17 @@ img {
 }
 
 @media screen and (max-width: 600px) {
+    .top-nav {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 
     //styling hamburger menu
     .top-nav {
-        #hamburgerMenu {
+        #hamburger-menu {
             display: inline-block;
             cursor: pointer;
+            justify-self: flex-end;
         }
 
         .bar1,
@@ -77,6 +97,20 @@ img {
             background-color: black;
             margin: 6px 0;
         }
+
+        #main-nav {
+            display: none;
+            padding-top: 1rem;
+            grid-area: 2 / 1 / 3 / 3;
+        }
+    }
+}
+
+nav {
+    ul {
+        display: flex;
+        flex-direction: column;
+        grid-area: 1 / 2 / 2 / 3;
     }
 }
 
@@ -113,6 +147,11 @@ img {
     .bar2,
     .bar3 {
         background-color: white !important;
+    }
+
+
+    .current-page {
+        background-color: base.$accent-color-dark;
     }
 
     article {
