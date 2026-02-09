@@ -4,13 +4,13 @@ $font-stack: Lucida Sans, sans-serif;
 
 //Light color-scheme
 $bg-color: #FDFBEE;
-$font-color: #3b3b3b;
+$font-color: #000000;
 $accent-color: #025404;
 
 //Dark color-scheme
-$bg-color-dark: #100430;
+$bg-color-dark: #000000;
 $font-color-dark: #dbd5d5;
-$accent-color-dark: #e9754b;
+$accent-color-dark: #C34618;
 
 //Font-sizes
 $fontsize-h1: 8rem;
@@ -55,9 +55,18 @@ $fontsize-p-mobile: 2rem;
     padding: 2rem;
     text-align: center;
     border-radius: 1rem;
-    background-color: color.scale($bg-color, $lightness: -5%);
     box-shadow: 0.3rem 0rem 0.3rem rgb(0, 0, 0, 0.6),
         -0.3rem 0rem 0.3rem rgb(0, 0, 0, 0.5);
+}
+
+@mixin button($bg-color) {
+    background-color: $bg-color;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 6rem;
+    padding: 2rem 3rem 2rem 3rem;
+    cursor: pointer;
 }
 
 //grundinställning för webbplatsen
