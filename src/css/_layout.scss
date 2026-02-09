@@ -110,6 +110,8 @@ footer {
 
         p {
             font-size: base.$fontsize-p-mobile;
+            line-height: 3rem;
+            padding: 1rem;
         }
     }
 
@@ -148,6 +150,22 @@ footer {
             justify-self: stretch;
         }
     }
+
+    main {
+        padding: 1rem
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    article {
+        width: 100%;
+    }
+
+        .button button {
+            font-size: 3rem;
+        }
 }
 
 @media (prefers-color-scheme: dark) {
