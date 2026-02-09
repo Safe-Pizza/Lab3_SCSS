@@ -2,7 +2,7 @@
 Detta är en laboration i _Webbutveckingsprogrammet_ på Mittuniveristetet.
 
 ## Länk till webbplats
-[Min webbplats]()
+[Min webbplats](https://dt211glab3.netlify.app/)
 
 ## Syfte
 Laborationen har syftet att skapa förståelse och användning av CSS-preproccesorer. Kunna använda SASS för att underlätta utveckling av CSS och automatisera transpilering av SASS-filer.
