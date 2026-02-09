@@ -17,14 +17,14 @@ $fontsize-h1: 8rem;
 $fontsize-h2: 4rem;
 $fontsize-h3: 3rem;
 $fontsize-p: 2rem;
-$fontsize-nav: 2.5rem;
+$fontsize-nav: 2rem;
 
 @mixin shape($size, $color, $circle) {
     width: $size;
     height: $size;
     background-color: $color;
     display: inline-block;
-    font-size: 8rem;
+    font-size: 6rem;
     padding-right: 10px;
     color: white;
 
@@ -84,9 +84,9 @@ p {
 }
 
 #shape-circle {
-    @include shape(100px, $accent-color, true);
+    @include shape(70px, $accent-color, true);
 }
 
 #shape-square {
-    @include shape(100px, $accent-color, false);
+    @include shape(70px, $accent-color, false);
 }
