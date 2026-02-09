@@ -118,10 +118,10 @@ p {
 }
 
 //logotyp storlek och färg i original tema
-#shape-circle {
+.shape-circle {
     @include shape(70px, $accent-color, true);
 }
 
-#shape-square {
+.shape-square {
     @include shape(70px, $accent-color, false);
 }
