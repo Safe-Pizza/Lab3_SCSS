@@ -86,6 +86,24 @@ footer {
 }
 
 @media screen and (max-width: 899px) {
+    body {
+        h1 {
+            font-size: base.$fontsize-h1-mobile;
+        }
+
+        h2 {
+            font-size: base.$fontsize-h2-mobile;
+        }
+
+        h3 {
+            font-size: base.$fontsize-h3-mobile;
+        }
+
+        p {
+            font-size: base.$fontsize-p-mobile;
+        }
+    }
+
     .top-nav {
         display: grid;
         grid-template-columns: auto auto;

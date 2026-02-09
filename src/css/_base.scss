@@ -14,10 +14,16 @@ $accent-color-dark: #e9754b;
 
 //Font-sizes
 $fontsize-h1: 8rem;
-$fontsize-h2: 4rem;
-$fontsize-h3: 3rem;
-$fontsize-p: 2rem;
+$fontsize-h2: 6rem;
+$fontsize-h3: 5rem;
+$fontsize-p: 3rem;
 $fontsize-nav: 2rem;
+
+//font-sizes media max-width 899px
+$fontsize-h1-mobile: 6rem;
+$fontsize-h2-mobile: 4rem;
+$fontsize-h3-mobile: 3.5rem;
+$fontsize-p-mobile: 2rem;
 
 @mixin shape($size, $color, $circle) {
     width: $size;
