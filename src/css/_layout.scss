@@ -68,6 +68,7 @@ main {
 
 section {
     display: grid;
+    @include base.section;
 }
 
 article {
@@ -151,6 +152,10 @@ footer {
         color: base.$accent-color-dark;
     }
 
+    h2 {
+        color: base.$accent-color-dark;
+    }
+
     #shape-circle {
         background-color: base.$accent-color-dark;
     }
@@ -182,9 +187,16 @@ footer {
     }
 
     article {
+        //* border-color: white;
+        background-color: color.scale(base.$bg-color-dark, $lightness: -100%);
+        //*box-shadow: 0.2em 0em 0.2em rgba(255, 255, 255, 0.6),
+        //*    -0.2em 0em 0.2em rgba(255, 255, 255, 0.6);
+    }
+
+    section {
+        background-color: color.scale(base.$bg-color-dark, $lightness: -15%);
         border-color: white;
-        background-color: color.scale(base.$bg-color-dark, $lightness: -50%);
-        box-shadow: 0.2em 0em 0.2em rgba(255, 255, 255, 0.6),
-            -0.2em 0em 0.2em rgba(255, 255, 255, 0.6);
+        box-shadow: 0.3rem 0rem 0.3rem rgba(255, 255, 255, 0.6),
+            -0.3rem 0rem 0.3rem rgba(255, 255, 255, 0.5);
     }
 }
