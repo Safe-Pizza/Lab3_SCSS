@@ -98,7 +98,7 @@ footer {
 /*Animationer*/
 
 .animation-scale:hover {
-    animation: testAnimation 800ms linear;
+    animation: scaleAnimation 800ms linear infinite;
 }
 
 .rotate {
@@ -178,9 +178,14 @@ footer {
         width: 100%;
     }
 
-        .button button {
-            font-size: 3rem;
-        }
+    .button button {
+        font-size: 3rem;
+    }
+
+    .image img {
+        width: 50%;
+        height: auto;
+    }
 }
 
 @media (prefers-color-scheme: dark) {

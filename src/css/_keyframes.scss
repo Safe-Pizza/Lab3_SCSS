@@ -5,20 +5,35 @@
 
     100% {
         transform: rotate(5deg);
+
     }
 }
 
-@keyframes testAnimation {
+@keyframes scaleAnimation {
     0% {
         transform: scale(1, 1);
+        box-shadow: 10px 5px 5px red,
+            -10px -5px 5px red;
+    }
+
+    25% {
+        box-shadow: 10px 5px 5px blue,
+            -10px -5px 5px blue;
     }
 
     50% {
         transform: scale(1.05, 1.05);
     }
 
+    75% {
+        box-shadow: 10px 5px 5px green,
+            -10px -5px 5px green;
+    }
+
     100% {
         transform: scale(1, 1);
+        box-shadow: 10px 5px 5px magenta,
+            -10px -5px 5px magenta;
     }
 }
 
