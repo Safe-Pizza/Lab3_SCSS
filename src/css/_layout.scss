@@ -105,6 +105,10 @@ footer {
     animation: rotateAnimation 2s linear infinite alternate;
 }
 
+.image {
+    animation: imagesAnimation 5s linear;
+}
+
 @media screen and (max-width: 899px) {
     body {
         h1 {

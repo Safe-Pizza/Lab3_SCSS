@@ -21,3 +21,25 @@
         transform: scale(1, 1);
     }
 }
+
+@keyframes imagesAnimation {
+    0% {
+        transform: translate(-2000px, -2000px)
+    }
+
+    25% {
+        transform: translate(-750px, -750px)
+    }
+
+    50% {
+        transform: translate(0px, 0px)
+    }
+
+    75% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
