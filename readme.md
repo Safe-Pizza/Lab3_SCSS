@@ -1,8 +1,12 @@
 # Laboration 3, DT211G - CSS-Preproccesorer
 Detta är en laboration i _Webbutveckingsprogrammet_ på Mittuniveristetet.
+Laborationen kommer att byggas på med ytterligare laborationer från kursen. De olika laborationernas sidor listas under "Länk till webbplats".
 
 ## Länk till webbplats
-[Min webbplats](https://dt211glab3.netlify.app/)
+[Min webbplats - Labb 4](https://dt211glab3.netlify.app/animation)
+
+
+[Min webbplats - Labb 3](https://dt211glab3.netlify.app/)
 
 ## Syfte
 Laborationen har syftet att skapa förståelse och användning av CSS-preproccesorer. Kunna använda SASS för att underlätta utveckling av CSS och automatisera transpilering av SASS-filer.
