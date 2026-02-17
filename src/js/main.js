@@ -1,7 +1,13 @@
-//Toggle funktion för mobil meny
+
+
+//Eventlyssnare för hamburgermeny
 document.querySelector("#hamburger-menu").addEventListener("click", toggleMenu);
+
+//Eventlyssnare för knapp animation
 document.querySelector(".toggle").addEventListener("click", toggleDiv);
 
+
+//togglefunktion för hamburgermeny
 function toggleMenu() {
     const mainNavEl = document.querySelector("#main-nav");
     const hamMenuEl = document.querySelector("#hamburger-menu");
@@ -15,12 +21,16 @@ function toggleMenu() {
     }
 }
 
+//togglefunktion för laddningsanimation
 function toggleDiv() {
     const divEl = document.querySelector(".container-loader");
+    const buttonEl = document.querySelector(".toggle");
 
     if (divEl.style.display === "grid") {
         divEl.style.display = "none";
+        buttonEl.innerHTML = "Klick";
     } else {
         divEl.style.display = "grid";
+        buttonEl.innerHTML = "Stoppa";
     }
 }
