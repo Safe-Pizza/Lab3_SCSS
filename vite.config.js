@@ -7,7 +7,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                sass: (__dirname, "sass.html")
+                sass: (__dirname, "sass.html"),
+                animation: (__dirname, "animation.html")
             }
         }
     },

@@ -1,4 +1,5 @@
 @use "base";
+@use "keyframes";
 @use "sass:color";
 
 .container {
@@ -75,7 +76,7 @@ article {
     @include base.article;
 }
 
-img {
+.img img {
     width: 100%;
     border-radius: 50%;
     margin-bottom: 5rem;
@@ -92,6 +93,31 @@ img {
 
 footer {
     @extend header;
+}
+
+/*Animationer*/
+
+.animation-scale:hover {
+    animation: scaleAnimation 1s linear infinite;
+}
+
+.container-loader {
+    display: none;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.loader {
+    border: 1.5rem solid white;
+    border-radius: 50%;
+    border-top: 1.5rem solid base.$accent-color;
+    width: 100px;
+    height: 100px;
+    animation: loading 2s linear infinite;
+}
+
+.image {
+    animation: imagesAnimation 5s linear;
 }
 
 @media screen and (max-width: 899px) {
@@ -151,6 +177,21 @@ footer {
         }
     }
 
+    //Ändrar hamburgermeny till kryss vid klick
+    .change {
+        .bar1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        .bar2 {
+            opacity: 0;
+        }
+
+        .bar3 {
+            transform: translate(0, -11px) rotate(45deg);
+        }
+    }
+
     main {
         padding: 1rem
     }
@@ -163,9 +204,14 @@ footer {
         width: 100%;
     }
 
-        .button button {
-            font-size: 3rem;
-        }
+    .button button {
+        font-size: 3rem;
+    }
+
+    .image img {
+        width: 50%;
+        height: auto;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -229,5 +275,10 @@ footer {
 
     .button button:hover {
         background-color: color.scale(base.$accent-color-dark, $lightness: 15%);
+    }
+
+    .loader {
+        border: 1.5rem solid white;
+        border-top: 1.5rem solid base.$accent-color-dark;
     }
 }
