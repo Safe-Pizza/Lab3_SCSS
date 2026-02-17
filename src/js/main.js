@@ -2,10 +2,14 @@
 document.querySelector("#hamburger-menu").addEventListener("click", toggleMenu);
 
 function toggleMenu() {
-    var x = document.querySelector("#main-nav");
-    if (x.style.display === "block") {
-        x.style.display = "none";
+    const mainNavEl = document.querySelector("#main-nav");
+    const hamMenuEl = document.querySelector("#hamburger-menu");
+
+    if (mainNavEl.style.display === "block") {
+        mainNavEl.style.display = "none";
+        hamMenuEl.classList.remove("change");
     } else {
-        x.style.display = "block";
+        mainNavEl.style.display = "block";
+        hamMenuEl.classList.add("change");
     }
 }
