@@ -101,8 +101,19 @@ footer {
     animation: scaleAnimation 1s linear infinite;
 }
 
-.rotate {
-    animation: rotateAnimation 2s linear infinite alternate;
+.container-loader {
+    display: none;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.loader {
+    border: 1.5rem solid white;
+    border-radius: 50%;
+    border-top: 1.5rem solid base.$accent-color;
+    width: 100px;
+    height: 100px;
+    animation: loading 2s linear infinite;
 }
 
 .image {
@@ -166,6 +177,7 @@ footer {
         }
     }
 
+    //Ändrar hamburgermeny till kryss vid klick
     .change {
         .bar1 {
             transform: translate(0, 11px) rotate(-45deg);
@@ -263,5 +275,10 @@ footer {
 
     .button button:hover {
         background-color: color.scale(base.$accent-color-dark, $lightness: 15%);
+    }
+
+    .loader {
+        border: 1.5rem solid white;
+        border-top: 1.5rem solid base.$accent-color-dark;
     }
 }
