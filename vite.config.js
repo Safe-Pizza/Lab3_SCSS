@@ -8,7 +8,9 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, "index.html"),
                 sass: (__dirname, "sass.html"),
-                animation: (__dirname, "animation.html")
+                animation: (__dirname, "animation.html"),
+                diagram: (__dirname, "diagram.html"),
+                karta: (__dirname, "karta.html")
             }
         }
     },
