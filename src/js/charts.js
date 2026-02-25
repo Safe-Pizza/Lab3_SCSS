@@ -20,13 +20,15 @@ async function fetchData() {
         //lagra i global variabel
         allChartData = data;
 
-        getStapelData(data);
+        writeStapelData(data);
     } catch (error) {
         console.error(`Felmeddelande ${error}`);
     }
 }
 
-function getStapelData(chartsData) {
+
+//funktion för filtrering och utskrift av stapeldiagram
+function writeStapelData(chartsData) {
     //lagra nya arrayer till stapel diagram
     const courseNameArr = [];
     const courseAppArr = [];

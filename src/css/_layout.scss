@@ -205,11 +205,17 @@ footer {
     }
 
     section {
-        padding: 1rem;
+        box-sizing: border-box;
+        max-width: 100%;
+        min-width: 100%;
     }
 
     article {
         width: 100%;
+    }
+
+    article.charts {
+        padding: 0px;
     }
 
     .button button {
@@ -218,6 +224,11 @@ footer {
 
     .image img {
         width: 50%;
+        height: auto;
+    }
+ 
+    .chart-container {
+        width: 100%;
         height: auto;
     }
 }
