@@ -120,6 +120,14 @@ footer {
     animation: imagesAnimation 5s linear;
 }
 
+/*diagram*/
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 40vh;
+  width: 101%;
+}
+
 @media screen and (max-width: 899px) {
     body {
         h1 {

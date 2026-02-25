@@ -36,12 +36,31 @@ function getStapelData(chartsData) {
 
     //sortera array fallande efter tot sökande
     courseData.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
-    
+
     //loop för 6 första värderna i sorterad array
     courseData.slice(0, 6).forEach(course => {
         courseNameArr.push(course.name);
         courseAppArr.push(course.applicantsTotal);
     })
+
+    //options för diagram
+    const options = {
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                stacked: true,
+                grid: {
+                    display: true,
+                    color: "rgba(255,99,132,0.2)"
+                }
+            },
+            x: {
+                grid: {
+                    display: false
+                }
+            }
+        }
+    };
 
     //Skapar stapeldiagram och skriver ut till DOM
     new Chart(chartStapel, {
@@ -49,17 +68,11 @@ function getStapelData(chartsData) {
         data: {
             labels: courseNameArr,
             datasets: [{
-                label: '# of Votes',
+                label: 'Antal sökande',
                 data: courseAppArr,
                 borderWidth: 1
             }]
         },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
+        options: options
+    })
 }
