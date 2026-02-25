@@ -86,6 +86,13 @@ function writeCharts(chartsData) {
                 'rgba(255, 204, 86, 0.73)',
                 'rgba(18, 241, 63, 0.73)',
                 'rgba(214, 27, 235, 0.73)'
+            ],
+            hoverBackgroundColor: [
+                'rgb(234, 46, 87)',
+                'rgb(54, 163, 235)',
+                'rgb(255, 204, 86)',
+                'rgb(18, 241, 63)',
+                'rgb(214, 27, 235)'
             ]
         }]
     };
@@ -102,6 +109,13 @@ function writeCharts(chartsData) {
                 'rgba(255, 204, 86, 0.73)',
                 'rgba(18, 241, 63, 0.73)',
                 'rgba(214, 27, 235, 0.73)'
+            ],
+            hoverBackgroundColor: [
+                'rgb(234, 46, 87)',
+                'rgb(54, 163, 235)',
+                'rgb(255, 204, 86)',
+                'rgb(18, 241, 63)',
+                'rgb(214, 27, 235)'
             ],
             hoverOffset: 4
         }]
