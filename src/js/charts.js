@@ -19,7 +19,7 @@ async function fetchData() {
 }
 
 
-//funktion för filtrering och utskrift av stapeldiagram
+//funktion för filtrering och utskrift av diagram
 function writeCharts(chartsData) {
     //DOM element för utskrift
     const chartStapel = document.querySelector("#canvas-stapel");
