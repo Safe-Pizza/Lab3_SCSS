@@ -59,7 +59,7 @@ function writeCharts(chartsData) {
                 stacked: true,
                 grid: {
                     display: true,
-                    color: "rgba(255, 255, 255, 0.2)"
+                    color: "rgba(255, 255, 255, 0.73)"
                 }
             },
             x: {
@@ -80,6 +80,8 @@ function writeCharts(chartsData) {
         datasets: [{
             data: courseAppArr,
             borderWidth: 1,
+            borderColor: 'rgb(255, 255, 255)',
+            borderWidth: 3,
             backgroundColor: [
                 'rgba(234, 46, 87, 0.73)',
                 'rgba(54, 163, 235, 0.73)',
