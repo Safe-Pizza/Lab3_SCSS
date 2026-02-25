@@ -2,65 +2,66 @@
 <html lang="sv">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/src/css/main.scss">
-  <title>Lab3 - SASS</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/main.scss">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Lab3 - SASS</title>
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="top-nav">
-        <div class="logotype">
-          <div id="shape-circle">R</div>
-          <div id="shape-square">U</div>
-          <div id="shape-circle">V</div>
-        </div>
-        <div id="hamburger-menu">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
-        </div>
-        <nav id="main-nav">
-          <ul>
-            <li class="current-page"><a href="/">Resa</a></li>
-            <li><a href="/sass">SASS</a></li>
-            <li><a href="/animation">Animation</a></li>
-            <li><a href="/diagram">Diagram</a></li>
-            <li><a href="/karta">Karta</a></li>
-          </ul>
-        </nav>
-      </div>
-      <h1>Res och upptäck världen</h1>
-    </header>
-    <main>
-      <section>
-        <h2>Diagram</h2>
-        <article>
-          <h3>Diagram 1</h3>
-          <p>Text om diagram här
-          </p>
-          <div id="diagram-stapel">
-
-          </div>
-        </article>
-        <article>
-          <h3>Diagram 2</h3>
-          <p>Text om diagram här
-          </p>
-          <div id="diagram-cirkel">
-
-          </div>
-        </article>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; Hanna Lindkvist 2026</p>
-    </footer>
-  </div>
-  <script type="module" src="/src/js/main.js"></script>
-  <script type="module" src="/src/js/charts.js"></script>
+    <div class="container">
+        <header>
+            <div class="top-nav">
+                <div class="logotype">
+                    <div id="shape-circle">R</div>
+                    <div id="shape-square">U</div>
+                    <div id="shape-circle">V</div>
+                </div>
+                <div id="hamburger-menu">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <nav id="main-nav">
+                    <ul>
+                        <li class="current-page"><a href="/">Resa</a></li>
+                        <li><a href="/sass">SASS</a></li>
+                        <li><a href="/animation">Animation</a></li>
+                        <li><a href="/diagram">Diagram</a></li>
+                        <li><a href="/karta">Karta</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1>Res och upptäck världen</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Diagram</h2>
+                <article>
+                    <h3>Diagram 1</h3>
+                    <p>Text om diagram här
+                    </p>
+                    <div id="diagram-stapel">
+                        <canvas id="canvas-stapel"></canvas>
+                    </div>
+                </article>
+                <article>
+                    <h3>Diagram 2</h3>
+                    <p>Text om diagram här
+                    </p>
+                    <div id="diagram-cirkel">
+                        <canvas id="canvas-cirkel"></canvas>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; Hanna Lindkvist 2026</p>
+        </footer>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/charts.js"></script>
 </body>
 
 </html>
