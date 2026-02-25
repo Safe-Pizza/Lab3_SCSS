@@ -67,13 +67,17 @@ function writeCharts(chartsData) {
                     display: false
                 }
             }
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
     };
 
     const stapelDataChart = {
         labels: courseNameArr,
         datasets: [{
-            label: 'Antal sökande',
             data: courseAppArr,
             borderWidth: 1,
             backgroundColor: [
