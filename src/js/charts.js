@@ -1,7 +1,10 @@
 "use strict";
 
-//global varibel för hämtad data
+//global variabel för hämtad data
 let allChartData = [];
+
+const chartStapel = document.querySelector("#canvas-stapel");
+const chartCirkel = document.querySelector("#canvas-cirkel");
 
 //ladda DOM
 document.addEventListener("DOMContentLoaded", async () => {
@@ -17,12 +20,46 @@ async function fetchData() {
         //lagra i global variabel
         allChartData = data;
 
-        writeChart(data);
+        getStapelData(data);
     } catch (error) {
         console.error(`Felmeddelande ${error}`);
     }
 }
 
-function writeChart(chartsData) {
-    console.log(chartsData);
+function getStapelData(chartsData) {
+    //lagra nya arrayer till stapel diagram
+    const courseNameArr = [];
+    const courseAppArr = [];
+
+    //filtrera array på type: kurs
+    const courseData = chartsData.filter((data) => data.type.toLowerCase().includes("kurs"));
+
+    //sortera array fallande efter tot sökande
+    courseData.sort((a, b) => b.applicantsTotal - a.applicantsTotal);
+    
+    //loop för 6 första värderna i sorterad array
+    courseData.slice(0, 6).forEach(course => {
+        courseNameArr.push(course.name);
+        courseAppArr.push(course.applicantsTotal);
+    })
+
+    //Skapar stapeldiagram och skriver ut till DOM
+    new Chart(chartStapel, {
+        type: 'bar',
+        data: {
+            labels: courseNameArr,
+            datasets: [{
+                label: '# of Votes',
+                data: courseAppArr,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 }
