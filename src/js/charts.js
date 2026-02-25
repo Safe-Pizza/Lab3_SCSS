@@ -75,7 +75,14 @@ function writeCharts(chartsData) {
         datasets: [{
             label: 'Antal sökande',
             data: courseAppArr,
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: [
+                'rgba(234, 46, 87, 0.73)',
+                'rgba(54, 163, 235, 0.73)',
+                'rgba(255, 204, 86, 0.73)',
+                'rgba(18, 241, 63, 0.73)',
+                'rgba(214, 27, 235, 0.73)'
+            ]
         }]
     };
 
@@ -86,9 +93,11 @@ function writeCharts(chartsData) {
             label: 'Antal sökande',
             data: programAppArr,
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)'
+                'rgba(234, 46, 87, 0.73)',
+                'rgba(54, 163, 235, 0.73)',
+                'rgba(255, 204, 86, 0.73)',
+                'rgba(18, 241, 63, 0.73)',
+                'rgba(214, 27, 235, 0.73)'
             ],
             hoverOffset: 4
         }]
@@ -102,9 +111,11 @@ function writeCharts(chartsData) {
     })
 
     //skapar cirkeldiagram och skriver ut till DOM
-        new Chart(chartCirkel, {
+    new Chart(chartCirkel, {
         type: 'pie',
         data: cirkelDataChart,
-        //options: stapelOptionChart
+        options: {
+            maintainAspectRatio: false
+        }
     })
 }
