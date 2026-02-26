@@ -1,10 +1,28 @@
 "use strict";
 
+/**
+ * Lyssnare för DOM färdigladdat
+ * Anropar sedan fetchData för att hämta data till sidan
+ * 
+ * @event DOMContentLoaded
+ * @listens document#DOMContentLoaded
+ * @returns {void} - returnerar inget värde utan anropar funktion när DOM laddat klart
+ */
+
 //ladda DOM
 document.addEventListener("DOMContentLoaded", async () => {
     fetchData();
 })
 
+/**
+ * Hämtar diagramdata från extern JSON-fil
+ * som skickas vidare till WriteCharts
+ * 
+ * @function fetchData
+ * @returns {void} - returnerar inget värde utan anropar funktion när data hämtas
+ * @throws {error} - Skriver ut fel i konsol om hämtning misslyckats
+ * 
+ */
 //hämta JSON-data
 async function fetchData() {
     try {
@@ -17,7 +35,17 @@ async function fetchData() {
         console.error(`Felmeddelande ${error}`);
     }
 }
-
+/**
+ * Filtrerar, sorterar och skiver ut 2 diagram till DOM
+ * Filtrerar ut kurser och program
+ * Sorterar i fallande ordning efter totalt sökande
+ * Väljer topp 6 sökta kurser & topp 5 sökta program
+ * Skapar cirkeldiagram för program och stapeldiagram för kurser
+ * 
+ * @function writeCharts
+ * @param {array} chartsData - array med data från JSON-fil
+ * @returns {void} - returnerar inget värde,
+ */
 
 //funktion för filtrering och utskrift av diagram
 function writeCharts(chartsData) {
