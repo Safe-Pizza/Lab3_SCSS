@@ -25,7 +25,7 @@ async function getData(input) {
         const data = await res.json();
         showMap(data);
     } catch (error) {
-        console.error(error);
+        document.querySelector("#map-result").innerHTML = "Platsen finns ej, prova sök igen";
     }
 }
 
@@ -39,6 +39,4 @@ function showMap(pos) {
 
     //skriva ut karta till DOM
     document.querySelector("#map-result").innerHTML = `<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="${mapUrl}"></iframe>`
-
-
 }
