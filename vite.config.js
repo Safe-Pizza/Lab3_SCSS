@@ -10,7 +10,11 @@ export default defineConfig({
                 sass: (__dirname, "sass.html"),
                 animation: (__dirname, "animation.html"),
                 diagram: (__dirname, "diagram.html"),
-                karta: (__dirname, "karta.html")
+                karta: (__dirname, "karta.html"),
+                JSDoc: (__dirname, "out/index.html"),
+                JSDocCharts: (__dirname, "out/charts.js.html"),
+                JSDocGlobal: (__dirname, "out/global.html"),
+                JSDocMap: (__dirname, "out/map.js.html")
             }
         }
     },
