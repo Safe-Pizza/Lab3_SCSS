@@ -166,6 +166,18 @@ input[type=text] {
     height: 100%;
 }
 
+/*Länk till JSDoc*/
+#JSDoc {
+    a {
+        color: base.$font-color;
+        font-size: base.$fontsize-nav;
+    }
+
+    a:hover {
+        color: base.$accent-color;
+    }
+}
+
 @media screen and (max-width: 899px) {
     body {
         h1 {
@@ -337,5 +349,15 @@ input[type=text] {
     .loader {
         border: 1.5rem solid white;
         border-top: 1.5rem solid base.$accent-color-dark;
+    }
+
+    #JSDoc {
+        a {
+            color: base.$font-color-dark;
+        }
+
+        a:hover {
+            color: base.$accent-color-dark;
+        }
     }
 }

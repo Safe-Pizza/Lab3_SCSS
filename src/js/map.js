@@ -6,7 +6,6 @@ const resultEl = document.querySelector("#map-result");
  * Lyssnare för klick för att anropa funktion getInputData
  * 
  * @event DOMContentLoaded
- * @event click
  * @returns {void} - returnerar inget värde utan anropar funktion getInputData vid klick
  */
 
@@ -21,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
  * Om sökfält inte är tomt anropas getData med sökdata
  * annars visas felmeddelande i DOM
  * 
+ * @listens document#btn-search - lyssnar efter klick på sökknapp
  * @returns {void} - returnerar inget värde utan anropar funktion getData med sökdata
  * @throws {string} - skriver felmeddelande i DOM vid tomt inputfält
  */
