@@ -1,7 +1,14 @@
 "use strict";
-
-const loaderEl = document.querySelector("#container-loader2");
 const resultEl = document.querySelector("#map-result");
+
+/**
+ * Lyssnare för DOM färdigladdat
+ * Lyssnare för klick för att anropa funktion getInputData
+ * 
+ * @event DOMContentLoaded
+ * @event click
+ * @returns {void} - returnerar inget värde utan anropar funktion getInputData vid klick
+ */
 
 //ladda DOM
 document.addEventListener("DOMContentLoaded", async () => {
@@ -9,25 +16,47 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.querySelector("#btn-search").addEventListener("click", getInputData);
 })
 
+/**
+ * Hämtar inmatad sökdata från inputfält
+ * Om sökfält inte är tomt anropas getData med sökdata
+ * annars visas felmeddelande i DOM
+ * 
+ * @returns {void} - returnerar inget värde utan anropar funktion getData med sökdata
+ * @throws {string} - skriver felmeddelande i DOM vid tomt inputfält
+ */
 function getInputData() {
     let searchValue = document.querySelector("#search-map").value.toLowerCase();
 
     if (searchValue.length > 0) {
         getData(searchValue);
     } else {
-        document.querySelector("#map-result").innerHTML = "Du måste fylla i textfältet";
+        resultEl.innerHTML = "Du måste fylla i textfältet";
     }
 }
 
+/**
+ * Hämtar geografisk data från Nominatim API utifrån användares sökdata från inputfält
+ * 
+ * @param {string} input - sökdata i textform från inputfält
+ * @returns {void} - returnerar inget värde utan anropar funktion showMap med data från API
+ * @throws {error} - skriver ut fel i DOM om hämtning misslyckas
+ */
 async function getData(input) {
     try {
         const res = await fetch(`https://nominatim.openstreetmap.org/search?q=${input}&format=jsonv2`);
         const data = await res.json();
         showMap(data);
     } catch (error) {
-        document.querySelector("#map-result").innerHTML = "Platsen finns ej, prova sök igen";
+        resultEl.innerHTML = "Platsen finns ej, prova sök igen";
     }
 }
+
+/**
+ * Visar karta med geodata (longitud & latitud) från första träffen från API-svaret
+ * 
+ * @param {array} pos - array med geodatabobjekt från API
+ * @returns {void} - returnerar inget värde utan uppdaterar DOM med karta
+ */
 
 function showMap(pos) {
     //latitud och longitud från första objektet i sökning
@@ -38,5 +67,5 @@ function showMap(pos) {
     const mapUrl = `https://www.openstreetmap.org/export/embed.html?bbox=${lon},${lat},${lon},${lat}&amp;layer=mapnik&amp;marker=${lat},${lon}`;
 
     //skriva ut karta till DOM
-    document.querySelector("#map-result").innerHTML = `<iframe class="responsive-iframe" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="${mapUrl}"></iframe>`
+    resultEl.innerHTML = `<iframe class="responsive-iframe" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="${mapUrl}"></iframe>`
 }

@@ -5,7 +5,6 @@
  * Anropar sedan fetchData för att hämta data till sidan
  * 
  * @event DOMContentLoaded
- * @listens document#DOMContentLoaded
  * @returns {void} - returnerar inget värde utan anropar funktion när DOM laddat klart
  */
 
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
  * Hämtar diagramdata från extern JSON-fil
  * som skickas vidare till WriteCharts
  * 
- * @function fetchData
  * @returns {void} - returnerar inget värde utan anropar funktion när data hämtas
  * @throws {error} - Skriver ut fel i konsol om hämtning misslyckats
  * 
@@ -42,7 +40,6 @@ async function fetchData() {
  * Väljer topp 6 sökta kurser & topp 5 sökta program
  * Skapar cirkeldiagram för program och stapeldiagram för kurser
  * 
- * @function writeCharts
  * @param {array} chartsData - array med data från JSON-fil
  * @returns {void} - returnerar inget värde,
  */
