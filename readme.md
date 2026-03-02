@@ -3,6 +3,10 @@ Detta är en laboration i _Webbutveckingsprogrammet_ på Mittuniveristetet.
 Laborationen kommer att byggas på med ytterligare laborationer från kursen. De olika laborationernas sidor listas under "Länk till webbplats".
 
 ## Länk till webbplats
+[Min webbplats - Labb 5 Diagram](https://dt211glab3.netlify.app/diagram)
+[Min webbplats - Labb 5 Karta](https://dt211glab3.netlify.app/karta)
+
+
 [Min webbplats - Labb 4](https://dt211glab3.netlify.app/animation)
 
 
