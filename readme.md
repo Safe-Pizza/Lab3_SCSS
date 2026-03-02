@@ -4,6 +4,7 @@ Laborationen kommer att byggas på med ytterligare laborationer från kursen. De
 
 ## Länk till webbplats
 [Min webbplats - Labb 5 Diagram](https://dt211glab3.netlify.app/diagram)
+
 [Min webbplats - Labb 5 Karta](https://dt211glab3.netlify.app/karta)
 
 
