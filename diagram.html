@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/main.scss">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>Lab3 - SASS</title>
+    <title>Lab5 - Diagram</title>
 </head>
 
 <body>
@@ -14,15 +14,16 @@
         <header>
             <div class="top-nav">
                 <div class="logotype">
-                    <div id="shape-circle">R</div>
-                    <div id="shape-square">U</div>
-                    <div id="shape-circle">V</div>
+                    <div class="shape-circle">R</div>
+                    <div class="shape-square">U</div>
+                    <div class="shape-circle">V</div>
                 </div>
                 <div id="hamburger-menu">
                     <div class="bar1"></div>
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div>
+                <!--Huvudnavigation-->
                 <nav id="main-nav">
                     <ul>
                         <li><a href="/">Resa</a></li>
@@ -47,7 +48,7 @@
                 </article>
                 <article class="charts">
                     <h3>Topp 5 program</h3>
-                                        <p>De 5 populäraste programmen med antal sökande.</p>
+                    <p>De 5 populäraste programmen med antal sökande.</p>
                     <div id="diagram-cirkel" class="chart-container">
                         <canvas id="canvas-cirkel"></canvas>
                     </div>
